@@ -54,16 +54,45 @@
   <!-- Main Content -->
   <main class="flex-grow p-5">
     <!-- Search Bar -->
-    <div class="flex justify-center mb-5">
-      <div class="flex w-2/3">
-        <input type="text" placeholder="Search Marketplace" class="flex-grow p-2 border border-gray-300 rounded-l-lg">
-        <button class="p-2 bg-gray-300 hover:bg-gray-400 rounded-r-lg">Search</button>
+    <form class="flex items-center max-w-lg mx-auto py-5 ">
+      <label for="voice-search" class="sr-only">Search</label>
+      <div class="relative w-full">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 8.25.22-.22a.75.75 0 0 1 1.28.53v6.441c0 .472.214.934.64 1.137a3.75 3.75 0 0 0 4.994-1.77c.205-.428-.152-.868-.627-.868h-.507m-6-2.25h7.5M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+          </svg>                   
+        </div>
+        <input type="text" id="voice-search"
+          class="bg-[#e5e7eb] border border-[#FF3300] text-black text-sm rounded-lg focus:ring-[#FF3300] focus:border-[#FF3300] block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-[#FF3300] dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#FF3300] dark:focus:border-[#FF3300]"
+          placeholder="Search with Location, Rate, ..." required />
+        <button type="button" class="absolute inset-y-0 end-0 flex items-center pe-3">
+          <svg class="w-4 h-4 text-[#FF3300] dark:text-[#FF3300] hover:text-white dark:hover:text-white"
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 7v3a5.006 5.006 0 0 1-5 5H6a5.006 5.006 0 0 1-5-5V7m7 9v3m-3 0h6M7 1h2a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3Z" />
+          </svg>
+        </button>
       </div>
+      <button type="submit"
+        class="inline-flex items-center py-2.5 px-3 ms-2 text-sm font-medium text-white bg-[#FF3300] rounded-lg border border-[#FF3300] hover:bg-[#1F1F1F] focus:ring-4 focus:outline-none focus:ring-[#FF3300] dark:bg-[#FF3300] dark:hover:bg-[#FF4500] dark:focus:ring-[#FF3300]">
+        <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+        </svg>Search
+      </button>
+    </form>
+
+    <!-- Category Links -->
+    <div class="flex justify-center space-x-10 mb-8">
+      <a href="cameraMarket.html" class="text-lg font-bold text-gray-600 hover:text-black">Cameras</a>
+      <a href="accessoriesMarket.html" class="text-lg font-bold text-gray-600 hover:text-black">Accessories</a>
+      <a href="rentCameraorAccessories.html" class="text-lg font-bold text-gray-600 hover:text-black">Rent</a>
+      <a href="saleProducts.html" class="text-lg font-bold text-gray-600 hover:text-black">Want to Sale?</a>
     </div>
 
     <!-- Product Grid -->
     <div class="max-w-7xl mx-auto">
-      <h1 class="text-3xl font-bold mb-5 text-center text-gray-800">Rent Cameras or Accessories</h1>
+      <h1 class="text-3xl font-bold mb-5 text-left text-gray-800">Rent Cameras or Accessories</h1>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Rental Cards -->
         <div class="bg-white shadow-lg rounded-lg overflow-hidden">
@@ -98,46 +127,44 @@
       </div>
     </div>
   </main>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6">
-    <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+</body>
+<footer class="bg-[#1F1F1F] text-white py-6">
+  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pl-5">
       <!-- About -->
       <div>
-        <h3 class="font-bold text-lg mb-2">About</h3>
-        <p>CamSociety is your one-stop platform for photographers and camera enthusiasts. Buy, sell, hire photographers,
-          and rent equipment all in one place.</p>
+          <h3 class="font-bold text-lg mb-2">About</h3>
+          <p>CamSociety is your one-stop platform for photographers and camera enthusiasts. Buy, sell, hire
+              photographers, and rent equipment all in one place.</p>
       </div>
       <!-- Quick Links -->
       <div>
-        <h3 class="font-bold text-lg mb-2">Quick Links</h3>
-        <ul>
-          <li><a href="#" class="hover:underline">Hire Photographer</a></li>
-          <li><a href="#" class="hover:underline">Book Events</a></li>
-          <li><a href="#" class="hover:underline">Sell Items</a></li>
-        </ul>
+          <h3 class="font-bold text-lg mb-2">Quick Links</h3>
+          <ul>
+              <li><a href="#" class="hover:underline">Hire Photographer</a></li>
+              <li><a href="#" class="hover:underline">Book Events</a></li>
+              <li><a href="#" class="hover:underline">Sell Items</a></li>
+          </ul>
       </div>
       <!-- Contact -->
       <div>
-        <h3 class="font-bold text-lg mb-2">Contact</h3>
-        <p>Email: support@camsociety.com</p>
-        <p>Phone: 123-456-7890</p>
-        <p>Address: 123 Photo Street, Photography City</p>
+          <h3 class="font-bold text-lg mb-2">Contact</h3>
+          <p>Email: support@camsociety.com</p>
+          <p>Phone: 123-456-7890</p>
+          <p>Address: 123 Photo Street, Photography City</p>
       </div>
       <!-- FAQ -->
       <div>
-        <h3 class="font-bold text-lg mb-2">FAQ</h3>
-        <ul>
-          <li><a href="#" class="hover:underline">How to sell photos?</a></li>
-          <li><a href="#" class="hover:underline">How to rent equipment?</a></li>
-          <li><a href="#" class="hover:underline">Payment options</a></li>
-        </ul>
+          <h3 class="font-bold text-lg mb-2">FAQ</h3>
+          <ul>
+              <li><a href="#" class="hover:underline">How to sell photos?</a></li>
+              <li><a href="#" class="hover:underline">How to rent equipment?</a></li>
+              <li><a href="#" class="hover:underline">Payment options</a></li>
+          </ul>
       </div>
-    </div>
-    <div class="text-center text-gray-400 mt-6">
+  </div>
+  <div class="text-center text-gray-400 mt-6">
       &copy; 2025 CamSociety. All rights reserved.
-    </div>
-  </footer>
-</body>
+  </div>
+</footer>
 
 </html>
