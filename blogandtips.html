@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Tips - CamSociety</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-f9f9f9 text-gray-800">
+    <!-- Header -->
+    <header class="bg-[#1F1F1F] flex justify-between items-center p-5">
+        <div class="text-2xl text-white font-bold flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z" />
+            </svg>
+            CAMSOCIETY
+        </div>
+        <nav class="space-x-5 text-white font-bold hidden md:flex">
+            <a href="#" class=" hover:text-[#FF3300]">Home</a>
+            <a href="marketplaceAll.html" class=" hover:text-[#FF3300]">Marketplace</a>
+            <a href="photosale.html" class=" hover:text-[#FF3300]">Photo Sale</a>
+            <a href="hirePhotographer.html" class=" hover:text-[#FF3300]">Hire Photographer</a>
+            <a href="eventbooking.html" class=" hover:text-[#FF3300]">Book Event</a>
+            <a href="blogandtips.html" class=" hover:text-[#FF3300]">Blog & Tips</a>
+        </nav>
+        <div class="flex text-white space-x-5 px-5">
+            <a href="#" class=" hover:text-[#FF3300]"><span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg> </span></a>
+
+            <a href="#" class=" hover:text-[#FF3300]"><span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 0 1-.923 1.785A5.969 5.969 0 0 0 6 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337Z" />
+                    </svg>
+                </span></a>
+            <a href="#" class=" hover:text-[#FF3300]"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-[#FF3300] text-white py-6 text-center">
+        <h1 class="text-4xl font-bold">Blog & Tips</h1>
+        <p class="mt-2 text-[#FAF0E6]">Explore thoughts, tips, and advice from professional photographers.</p>
+    </section>
+
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto p-6 mt-6">
+        <!-- Blog Post Section -->
+        <section>
+            <h2 class="text-2xl font-bold mb-4 text-[#1F1F1F]">Recent Posts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Blog Post Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="photos/blogandtipspost1.png" alt="Blog Post 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-[#1F1F1F]">বিবাহের ফটোগ্রাফির জন্য শীর্ষ টিপস</h3>
+                        <p class="text-[#1F1F1F] mt-2">এই বাস্তব টিপসগুলির সাহায্যে কীভাবে অবিস্মরণীয় বিবাহের
+                            মুহূর্তগুলি ক্যাপচার করবেন তা আবিষ্কার করুন...</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">By John Doe</span>
+                            <!-- Read More Button -->
+                            <button onclick="openModal('modal-1')"
+                                class="text-[#FF3300] font-semibold hover:underline">Read More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repeatable Blog Post Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="photos/blogandtipspost2.png" alt="Blog Post 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-[#1F1F1F]">5 Tricks for Outdoor Portraits</h3>
+                        <p class="text-[#1F1F1F] mt-2">Learn how to make the most of natural light to create stunning
+                            portraits...</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">By Jane Smith</span>
+                            <!-- Read More Button -->
+                            <button onclick="openModal('modal-2')"
+                                class="text-[#FF3300] font-semibold hover:underline">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Structure for Read More -->
+
+    <!-- Modal 1 -->
+    <div id="modal-1" tabindex="-1" aria-hidden="true"
+        class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+        <div class="relative bg-white rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-1/2 max-h-[80vh] overflow-y-auto">
+            <div class="flex items-center justify-between p-5 border-b">
+                <h3 class="text-2xl font-semibold text-gray-900">Top Tips for Wedding Photography</h3>
+                <button type="button" class="text-gray-400 hover:text-gray-600 rounded-lg text-sm"
+                    onclick="closeModal('modal-1')">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <div class="flex flex-col p-6 space-y-4">
+                <img src="photos/blogandtipspost1.png" alt="Wedding Photography"
+                    class="w-full h-60 object-cover rounded-lg mb-4">
+                <p class="text-lg text-gray-700">বিবাহের ফটোগ্রাফি হল নিরবধি মুহূর্তগুলি ক্যাপচার করা। আপনাকে সেরা শট
+                    পেতে সাহায্য করার জন্য এখানে কিছু ব্যবহারিক টিপস রয়েছে:</p>
+                <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                    <li>মূল মুহূর্তের জন্য প্রস্তুত হতে ইভেন্টের সময়সূচী বুঝে নিন।</li>
+                    <li>Soft and Flattering ছবি তৈরি করতে যখনই সম্ভব প্রাকৃতিক আলো ব্যবহার করুন।</li>
+                    <li>Candid মুহূর্তগুলি ক্যাপচার করার উপর ফোকাস করুন, শুধু পোজ করা নয়।</li>
+                    <li>সৃজনশীল শট জন্য বিভিন্ন কোণ সঙ্গে পরীক্ষা.</li>
+                    <li>প্রযুক্তিগত সমস্যা এড়াতে সর্বদা একটি ব্যাকআপ ক্যামেরা এবং ব্যাটারি রাখুন।</li>
+                </ul>
+            </div>
+            <div class="p-5 border-t flex justify-end">
+                <button onclick="closeModal('modal-1')"
+                    class="bg-[#FF3300] text-white px-6 py-2 rounded-lg hover:bg-cyan-700 font-semibold">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal-2" tabindex="-1" aria-hidden="true"
+        class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+        <div class="relative bg-white rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-1/2 max-h-[80vh] overflow-y-auto">
+            <div class="flex items-center justify-between p-5 border-b">
+                <h3 class="text-2xl font-semibold text-gray-900">5 Tricks for Outdoor Portraits</h3>
+                <button type="button" class="text-gray-400 hover:text-gray-600 rounded-lg text-sm"
+                    onclick="closeModal('modal-2')">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <div class="flex flex-col p-6 space-y-4">
+                <img src="photos/blogandtipspost2.png" alt="Outdoor Portraits"
+                    class="w-full h-60 object-cover rounded-lg mb-4">
+                <p class="text-lg text-gray-700">Here are some tricks to take stunning outdoor portraits:</p>
+                <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                    <li>Use the golden hour for soft and warm light.</li>
+                    <li>Experiment with bokeh by using a wide aperture.</li>
+                    <li>Consider your background to enhance the subject.</li>
+                    <li>Capture candid moments to convey emotions.</li>
+                    <li>Make use of natural surroundings for a more dynamic composition.</li>
+                </ul>
+            </div>
+            <div class="p-5 border-t flex justify-end">
+                <button onclick="closeModal('modal-2')"
+                    class="bg-[#FF3300] text-white px-6 py-2 rounded-lg hover:bg-cyan-700 font-semibold">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+    </script>
+</body>
+<!-- Footer -->
+<footer class="bg-[#1F1F1F] text-white py-6">
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pl-5">
+        <!-- About -->
+        <div>
+            <h3 class="font-bold text-lg mb-2">About</h3>
+            <p>CamSociety is your one-stop platform for photographers and camera enthusiasts. Buy, sell, hire
+                photographers, and rent equipment all in one place.</p>
+        </div>
+        <!-- Quick Links -->
+        <div>
+            <h3 class="font-bold text-lg mb-2">Quick Links</h3>
+            <ul>
+                <li><a href="#" class="hover:underline">Hire Photographer</a></li>
+                <li><a href="#" class="hover:underline">Book Events</a></li>
+                <li><a href="#" class="hover:underline">Sell Items</a></li>
+            </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+            <h3 class="font-bold text-lg mb-2">Contact</h3>
+            <p>Email: support@camsociety.com</p>
+            <p>Phone: 123-456-7890</p>
+            <p>Address: 123 Photo Street, Photography City</p>
+        </div>
+        <!-- FAQ -->
+        <div>
+            <h3 class="font-bold text-lg mb-2">FAQ</h3>
+            <ul>
+                <li><a href="#" class="hover:underline">How to sell photos?</a></li>
+                <li><a href="#" class="hover:underline">How to rent equipment?</a></li>
+                <li><a href="#" class="hover:underline">Payment options</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="text-center text-gray-400 mt-6">
+        &copy; 2025 CamSociety. All rights reserved.
+    </div>
+</footer>
+
+</html>
