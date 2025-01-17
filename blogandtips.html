@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog & Tips - CamSociety</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-f9f9f9 text-gray-800">
@@ -25,7 +25,7 @@
         <nav class="space-x-5 text-white font-bold hidden md:flex">
             <a href="#" class=" hover:text-[#FF3300]">Home</a>
             <a href="marketplaceAll.html" class=" hover:text-[#FF3300]">Marketplace</a>
-            <a href="photosale.html" class=" hover:text-[#FF3300]">Photo Sale</a>
+            <a href="buy_photo.html" class=" hover:text-[#FF3300]">Buy Photo</a>
             <a href="hirePhotographer.html" class=" hover:text-[#FF3300]">Hire Photographer</a>
             <a href="eventbooking.html" class=" hover:text-[#FF3300]">Book Event</a>
             <a href="blogandtips.html" class=" text-[#FF3300]">Blog & Tips</a>
@@ -66,7 +66,8 @@
             <h2 class="text-2xl font-bold mb-4 text-[#1F1F1F]">Recent Posts</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Blog Post Card -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
                     <img src="photos/blogandtipspost1.png" alt="Blog Post 1" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold text-[#1F1F1F]">বিবাহের ফটোগ্রাফির জন্য শীর্ষ টিপস</h3>
@@ -82,7 +83,8 @@
                 </div>
 
                 <!-- Repeatable Blog Post Card -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
                     <img src="photos/blogandtipspost2.png" alt="Blog Post 2" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold text-[#1F1F1F]">5 Tricks for Outdoor Portraits</h3>
@@ -131,12 +133,24 @@
                     <li>প্রযুক্তিগত সমস্যা এড়াতে সর্বদা একটি ব্যাকআপ ক্যামেরা এবং ব্যাটারি রাখুন।</li>
                 </ul>
             </div>
-            <div class="p-5 border-t flex justify-end">
-                <button onclick="closeModal('modal-1')"
+            <!-- hit button and close modals-->
+            <span class="flex items-center justify-between p-5 border-t">
+                <div
+                    class="cursor-pointer flex items-center space-x-1 rounded-full text-gray-400 hover:text-rose-600 border border-[#1F1F1F] bg-white hover:bg-rose-50 py-1 px-2 text-xl font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 fill-current hover:text-red-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                    <p class="font-semibold text-xs">10</p>
+                </div>
+
+                <!-- End Aligned Button -->
+                <button onclick="closeModal('modal-2')"
                     class="bg-[#FF3300] text-white px-6 py-2 rounded-lg hover:bg-[#1F1F1F] font-semibold">
                     Close
                 </button>
-            </div>
+            </span>
         </div>
     </div>
 
@@ -168,16 +182,26 @@
                     <li>Make use of natural surroundings for a more dynamic composition.</li>
                 </ul>
             </div>
-            <div class="p-5 border-t flex justify-end">
+            <!-- hit button and close modals-->
+            <span class="flex items-center justify-between p-5 border-t">
+                <div
+                    class="cursor-pointer flex items-center space-x-1 rounded-full text-gray-400 hover:text-rose-600 border border-[#1F1F1F] bg-white hover:bg-rose-50 py-1 px-2 text-xl font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 fill-current hover:text-red-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                    <p class="font-semibold text-xs">10</p>
+                </div>
+
+                <!-- End Aligned Button -->
                 <button onclick="closeModal('modal-2')"
                     class="bg-[#FF3300] text-white px-6 py-2 rounded-lg hover:bg-[#1F1F1F] font-semibold">
                     Close
                 </button>
-            </div>
+            </span>
         </div>
     </div>
-
-
 
     <script>
         function openModal(modalId) {
@@ -202,9 +226,9 @@
         <div>
             <h3 class="font-bold text-lg mb-2">Quick Links</h3>
             <ul>
-                <li><a href="#" class="hover:underline">Hire Photographer</a></li>
-                <li><a href="#" class="hover:underline">Book Events</a></li>
-                <li><a href="#" class="hover:underline">Sell Items</a></li>
+                <li><a href="#" class="hover:text-[#FF3300]">Hire Photographer</a></li>
+                <li><a href="#" class="hover:text-[#FF3300]">Book Events</a></li>
+                <li><a href="#" class="hover:text-[#FF3300]">Sell Items</a></li>
             </ul>
         </div>
         <!-- Contact -->
@@ -219,8 +243,8 @@
             <h3 class="font-bold text-lg mb-2">FAQ</h3>
             <ul>
                 <li><a href="#" class="hover:text-[#FF3300]">How to sell photos?</a></li>
-          <li><a href="#" class="hover:text-[#FF3300]">How to rent equipment?</a></li>
-          <li><a href="#" class="hover:text-[#FF3300]">Payment options</a></li>
+                <li><a href="#" class="hover:text-[#FF3300]">How to rent equipment?</a></li>
+                <li><a href="#" class="hover:text-[#FF3300]">Payment options</a></li>
             </ul>
         </div>
     </div>
