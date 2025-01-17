@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sale Products - CamSociety</title>
+  <title>Sale Photo - CamSociety</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+<body class="bg-f9f9f9 text-gray-800">
   <!-- Header -->
   <header class="bg-[#1F1F1F] flex justify-between items-center p-5">
     <div class="text-2xl text-white font-bold flex items-center">
@@ -24,14 +24,13 @@
     </div>
     <nav class="space-x-5 text-white font-bold hidden md:flex">
       <a href="#" class=" hover:text-[#FF3300]">Home</a>
-      <a href="marketplaceAll.html" class=" text-[#FF3300]">Marketplace</a>
-      <a href="photosale.html" class=" hover:text-[#FF3300]">Photo Sale</a>
-      <a href="hirePhotographer.html" class=" hover:text-[#FF3300]">Hire Photographer</a>
-      <a href="eventbooking.html" class=" hover:text-[#FF3300]">Book Event</a>
-      <a href="blogandtips.html" class=" hover:text-[#FF3300]">Blog & Tips</a>
+      <a href="photographer_marketplaceAll.html" class=" hover:text-[#FF3300]">Marketplace</a>
+      <a href="photographer_photosale.html" class=" text-[#FF3300]">Photo Sale</a>
+      <a href="photographer_eventbooking.html" class=" hover:text-[#FF3300]">Book Event</a>
+      <a href="photographer_blogandtips.html" class=" hover:text-[#FF3300]">Share Blog & Tips</a>
     </nav>
     <div class="flex text-white space-x-5 px-5">
-      <a href="cart.html" class=" hover:text-[#FF3300]"><span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+      <a href="photographer_cart.html" class=" hover:text-[#FF3300]"><span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
             viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
@@ -51,64 +50,39 @@
       </a>
     </div>
   </header>
-  <!-- Category Links -->
-  <div class="flex justify-center space-x-10 mb-8 p-5">
-    <a href="cameraMarket.html" class="text-lg font-bold text-gray-600 hover:text-black">Cameras</a>
-    <a href="accessoriesMarket.html" class="text-lg font-bold text-gray-600 hover:text-black">Accessories</a>
-    <a href="rentCameraorAccessories.html" class="text-lg font-bold text-gray-600 hover:text-black">Rent</a>
-    <a href="saleProducts.html" class="text-lg font-bold text-black">Want to Sale?</a>
-  </div>
+
   <!-- Main Content -->
-  <main class="flex-grow pb-5">
-    <div class="bg-gray-50 p-8 shadow-lg rounded-lg max-w-2xl mx-auto">
-      <h1 class="justify-center text-center text-3xl font-bold">What Do You Want to Sale?</h1><br>
-      <form action="#">
-        <div class="mb-6">
-          <label class="block mb-2 font-medium text-gray-700">Product Type</label>
-          <div class="flex space-x-4">
-            <label class="flex items-center space-x-2">
-              <input type="radio" name="product_type" value="camera" class="text-gray-500">
-              <span>Camera</span>
-            </label>
-            <label class="flex items-center space-x-2">
-              <input type="radio" name="product_type" value="accessories" class="text-gray-500">
-              <span>Camera Accessories</span>
-            </label>
-          </div>
+  <main class="p-5">
+    <div class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-8">
+      <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">Sell Your Photos</h1>
+      <form>
+        <div class="mb-4">
+          <label for="photo-title" class="block text-gray-700 font-bold mb-2">Photo Title</label>
+          <input type="text" id="photo-title" placeholder="Enter title"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400">
         </div>
 
-        <div class="mb-6">
-          <label for="product_photo" class="block mb-2 font-medium text-gray-700">Product Photo</label>
-          <input type="file" id="product_photo" name="product_photo"
-            class="block w-full px-3 py-2 border border-gray-300 rounded-md">
+        <div class="mb-4">
+          <label for="photo-description" class="block text-gray-700 font-bold mb-2">Description</label>
+          <textarea id="photo-description" placeholder="Enter description"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400"></textarea>
         </div>
 
-        <div class="mb-6">
-          <label for="product_name" class="block mb-2 font-medium text-gray-700">Product Name</label>
-          <input type="text" id="product_name" name="product_name"
-            class="block w-full px-3 py-2 border border-gray-300 rounded-md">
+        <div class="mb-4">
+          <label for="photo-price" class="block text-gray-700 font-bold mb-2">Price (BDT)</label>
+          <input type="number" id="photo-price" placeholder="Enter price"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400">
         </div>
 
-        <div class="mb-6">
-          <label for="product_price" class="block mb-2 font-medium text-gray-700">Product Price</label>
-          <input type="number" id="product_price" name="product_price"
-            class="block w-full px-3 py-2 border border-gray-300 rounded-md">
+        <div class="mb-4">
+          <label for="photo-upload" class="block text-gray-700 font-bold mb-2">Upload Photo</label>
+          <input type="file" id="photo-upload"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400">
         </div>
 
-        <div class="mb-6">
-          <label for="product_short_description" class="block mb-2 font-medium text-gray-700">Short Description</label>
-          <textarea id="product_short_description" name="product_short_description" rows="3"
-            class="block w-full px-3 py-2 border border-gray-300 rounded-md"></textarea>
-        </div>
-
-        <div class="mb-6">
-          <label for="product_description" class="block mb-2 font-medium text-gray-700">Full Description</label>
-          <textarea id="product_description" name="product_description" rows="5"
-            class="block w-full px-3 py-2 border border-gray-300 rounded-md"></textarea>
-        </div>
-
-        <button type="submit"
-          class="w-full bg-[#1F1F1F] text-white py-2 px-4 rounded-md hover:bg-[#FF3300]">Submit</button>
+        <button type="submit" class="w-full bg-[#1F1F1F] text-white py-2 px-4 rounded-md font-bold hover:bg-[#FF3300]">
+          Submit for Sale
+        </button>
       </form>
     </div>
   </main>
@@ -126,9 +100,9 @@
     <div>
       <h3 class="font-bold text-lg mb-2">Quick Links</h3>
       <ul>
-        <li><a href="hirePhotographer.html" class="hover:text-[#FF3300]">Hire Photographer</a></li>
-        <li><a href="eventbooking.html" class="hover:text-[#FF3300]">Book Events</a></li>
-        <li><a href="saleProducts.html" class="hover:text-[#FF3300]">Sell Items</a></li>
+        <li><a href="photographer_photosale.html" class="hover:text-[#FF3300]">Sell Photos</a></li>
+        <li><a href="photographer_eventbooking.html" class="hover:text-[#FF3300]">Book Events</a></li>
+        <li><a href="photographer_saleProducts.html" class="hover:text-[#FF3300]">Sell Items</a></li>
       </ul>
     </div>
     <!-- Contact -->

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Dashboard</title>
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <aside class="fixed bg-gray-800 text-gray-100 w-64 flex flex-col h-full">
+            <div class="flex items-center justify-center h-16 bg-gray-900">
+                <h1 class="text-xl font-bold">CAMSOCIETY</h1>
+            </div>
+            <nav class="flex-1 px-4 py-2 space-y-1">
+                <a href="AdminDashboard.html" class="block py-2 px-3 rounded hover:bg-gray-700">Dashboard</a>
+                <a href="adminAnalytics.html" class="block py-2 px-3 rounded hover:bg-gray-700">Analytics</a>
+
+                <h2 class="mt-4 text-sm font-bold text-gray-400">Management</h2>
+                <a href="UserControl.html" class="block py-2 px-3 rounded hover:bg-gray-700">Users</a>
+                <a href="PhotographerControl.html" class="block py-2 px-3 rounded hover:bg-gray-700">Photographers</a>
+                <a href="MarketPlaceManagement.html" class="block py-2 px-3 rounded hover:bg-gray-700">Camera &
+                    Accessories</a>
+                <a href="RentItemManagement.html" class="block py-2 px-3 rounded hover:bg-gray-700">Rent Items</a>
+                <a href="PhotoSaleManagement.html" class="block py-2 px-3 rounded hover:bg-gray-700">Photo Sales</a>
+                <a href="EventManagement.html" class="block py-2 px-3 rounded hover:bg-gray-700">Event-Management</a>
+                <a href="BlogsTipsManagement.html" class="block py-2 px-3 rounded hover:bg-gray-700">Blogs & Tips</a>
+
+                <h2 class="mt-4 text-sm font-bold text-gray-400">Notifications</h2>
+                <a href="TransactionManagement.html" class="block py-2 px-3 rounded hover:bg-gray-700">Transaction</a>
+                <a href="ReportActions.html" class="block py-2 px-3 rounded hover:bg-gray-700">Report & Actions</a>
+            </nav>
+            <div class="flex items-center justify-center">
+                <button type="button" onclick="window.location.href = '../landingPage.html'"
+                    class="p-2 bg-green-500 text-white rounded mb-6">Log Out</button>
+            </div>
+        </aside>
+
+        <main class="bg-gray100 flex flex-col items-center p-6 ml-64">
+            <!-- Page Header -->
+            <div class="text-center mb-6 mt-5">
+                <h1 class="text-2xl font-bold">Hello Admin!</h1>
+            </div>
+
+            <!-- User List -->
+
+            <!-- Photo Sale Section -->
+            <div class="w-full max-w-6xl p-6 bg-[#A7C4BC] rounded-lg shadow-md ml-8">
+                <!-- Header -->
+                <h2 class="text-black text-xl font-bold mb-4">User List</h2>
+
+                <!-- Carousel -->
+                <div class="relative">
+                    <!-- Items Container -->
+                    <div class="flex overflow-x-auto space-x-4 scrollbar-hide">
+
+                        <!-- Card 1 -->
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Hasan</h2>
+                                <p class="text-gray-600">mhb@gmail.com</p>
+                                <p class="text-gray-600">01679861740</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Hasan</h2>
+                                <p class="text-gray-600">mhb@gmail.com</p>
+                                <p class="text-gray-600">01679861740</p>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate Cards -->
+                        <!-- Repeat as needed for more photographers -->
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Hasan</h2>
+                                <p class="text-gray-600">mhb@gmail.com</p>
+                                <p class="text-gray-600">01679861740</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Hasan</h2>
+                                <p class="text-gray-600">mhb@gmail.com</p>
+                                <p class="text-gray-600">01679861740</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Hasan</h2>
+                                <p class="text-gray-600">mhb@gmail.com</p>
+                                <p class="text-gray-600">01679861740</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Hasan</h2>
+                                <p class="text-gray-600">mhb@gmail.com</p>
+                                <p class="text-gray-600">01679861740</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Hasan</h2>
+                                <p class="text-gray-600">mhb@gmail.com</p>
+                                <p class="text-gray-600">01679861740</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Arrow -->
+                    <button
+                        class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-gray-800"
+                        onclick="scrollRight(this)">
+                        →
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Photographer List -->
+
+            <!-- Photo Sale Section -->
+            <div class="w-full max-w-6xl p-6 bg-[#D9CAB3] rounded-lg shadow-md ml-8 mt-4">
+                <!-- Header -->
+                <h2 class="text-black text-xl font-bold mb-4">Photographer List</h2>
+
+                <!-- Carousel -->
+                <div class="relative">
+                    <!-- Items Container -->
+                    <div class="flex overflow-x-auto space-x-4 scrollbar-hide">
+
+                        <!-- Card 1 -->
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Macro Usha</h2>
+                                <p class="text-yellow-500 mt-2">4.8/5</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Macro Usha</h2>
+                                <p class="text-yellow-500 mt-2">4.8/5</p>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate Cards -->
+                        <!-- Repeat as needed for more photographers -->
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Macro Usha</h2>
+                                <p class="text-yellow-500 mt-2">4.8/5</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Macro Usha</h2>
+                                <p class="text-yellow-500 mt-2">4.8/5</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Macro Usha</h2>
+                                <p class="text-yellow-500 mt-2">4.8/5</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Macro Usha</h2>
+                                <p class="text-yellow-500 mt-2">4.8/5</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Macro Usha</h2>
+                                <p class="text-yellow-500 mt-2">4.8/5</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Macro Usha</h2>
+                                <p class="text-yellow-500 mt-2">4.8/5</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Macro Usha</h2>
+                                <p class="text-yellow-500 mt-2">4.8/5</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Macro Usha</h2>
+                                <p class="text-yellow-500 mt-2">4.8/5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Arrow -->
+                    <button
+                        class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-gray-800"
+                        onclick="scrollRight(this)">
+                        →
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Market place -->
+
+            <!-- Photo Sale Section -->
+            <div class="w-full max-w-6xl p-6 bg-[#A16969] rounded-lg shadow-md ml-8 mt-4">
+                <!-- Header -->
+                <h2 class="text-black text-xl font-bold mb-4">Camera & Accessories</h2>
+
+                <!-- Carousel -->
+                <div class="relative">
+                    <!-- Items Container -->
+                    <div class="flex overflow-x-auto space-x-4 scrollbar-hide">
+                        <!-- Card 1 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">PRICE</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">PRICE</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">PRICE</p>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">PRICE</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">PRICE</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">PRICE</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">PRICE</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">PRICE</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Arrow -->
+                    <button
+                        class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-gray-800"
+                        onclick="scrollRight(this)">
+                        →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Rent Items -->
+
+            <!-- Photo Sale Section -->
+            <div class="w-full max-w-6xl p-6 bg-[#BCAAA4] rounded-lg shadow-md ml-8 mt-4">
+                <!-- Header -->
+                <h2 class="text-black text-xl font-bold mb-4">Rent Items</h2>
+
+                <!-- Carousel -->
+                <div class="relative">
+                    <!-- Items Container -->
+                    <div class="flex overflow-x-auto space-x-4 scrollbar-hide">
+                        <!-- Card 1 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">Rent</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">Rent</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">Rent</p>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">Rent</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">Rent</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">Rent</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">Rent</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="https://via.placeholder.com/150" alt="Camera" class="w-full h-24 object-cover">
+                            <p class="mt-2 text-center font-bold">NAME TAG</p>
+                            <p class="text-center text-gray-500">Rent</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Arrow -->
+                    <button
+                        class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-gray-800"
+                        onclick="scrollRight(this)">
+                        →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Photo Sale -->
+
+            <!-- Photo Sale Section -->
+            <div class="w-full max-w-6xl p-6 bg-[#546770] rounded-lg shadow-md ml-8 mt-4">
+                <!-- Header -->
+                <h2 class="text-black text-xl font-bold mb-4">Photo Sale</h2>
+
+                <!-- Carousel -->
+                <div class="relative">
+                    <!-- Items Container -->
+                    <div class="flex overflow-x-auto space-x-4 scrollbar-hide">
+                        <!-- Card 1 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="../assets/Image  1.jpg" alt="Camera" class="w-full h-24 object-cover">
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="../assets/Image  2.jpg" alt="Camera" class="w-full h-24 object-cover">
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="../assets/Image  3.jpg" alt="Camera" class="w-full h-24 object-cover">
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="../assets/Image 4.jpg" alt="Camera" class="w-full h-24 object-cover">
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="../assets/Image  5.jpg" alt="Camera" class="w-full h-24 object-cover">
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="../assets/Image  6.jpg" alt="Camera" class="w-full h-24 object-cover">
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="../assets/Image  7.jpg" alt="Camera" class="w-full h-24 object-cover">
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="flex-none w-40 p-4 bg-white rounded-lg shadow-md mb-2">
+                            <img src="../assets/Image  8.jpg" alt="Camera" class="w-full h-24 object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Right Arrow -->
+                    <button
+                        class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-gray-800"
+                        onclick="scrollRight(this)">
+                        →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Event List -->
+
+            <!-- Photo Sale Section -->
+            <div class="w-full max-w-6xl p-6 bg-[#73535e] rounded-lg shadow-md ml-8 mt-4">
+                <!-- Header -->
+                <h2 class="text-black text-xl font-bold mb-4">Event List</h2>
+
+                <!-- Carousel -->
+                <div class="relative">
+                    <!-- Items Container -->
+                    <div class="flex overflow-x-auto space-x-4 scrollbar-hide">
+
+                        <!-- Card 1 -->
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Team ALPHA</h2>
+                                <p class="text-yellow-500 mt-2">4.8/5</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Team Beta</h2>
+                                <p class="text-yellow-500 mt-2">4.8/5</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                    150 x 150</div>
+                                <h2 class="mt-4 font-bold">Team Gama</h2>
+                                <p class="text-yellow-500 mt-2">4.8/5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Arrow -->
+                    <button
+                        class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-gray-800"
+                        onclick="scrollRight(this)">
+                        →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Blogs and Tips List -->
+
+            <!-- Photo Sale Section -->
+            <div class="w-full max-w-6xl p-6 bg-[#73535e] rounded-lg shadow-md ml-8 mt-4">
+                <!-- Header -->
+                <h2 class="text-black text-xl font-bold mb-4">BLogs & Tips List</h2>
+
+                <!-- Carousel -->
+                <div class="relative">
+                    <!-- Items Container -->
+                    <div class="flex overflow-x-auto space-x-4 scrollbar-hide">
+
+                        <!-- Card 1 -->
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <img src="../assets/Image  6.jpg" alt="Outdoor Portraits"
+                                    class="w-30 h-24 object-cover rounded-sm mb-4">
+                                <h3 class="font-semibold text-gray-900">5 Tricks for Outdoor Portraits</h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-white p-4 shadow rounded mb-2">
+                            <div class="flex flex-col items-center">
+                                <img src="../assets/Image  5.jpg" alt="Outdoor Portraits"
+                                    class="w-30 h-24 object-cover rounded-sm mb-4">
+                                    <h3 class="font-semibold text-gray-900">Top Tips for Wedding Photography</h3>
+                            </div>
+                        </div>
+
+                        
+                    <!-- Right Arrow -->
+                    <button
+                        class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-gray-800"
+                        onclick="scrollRight(this)">
+                        →
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        function scrollRight(button) {
+            // Find the closest carousel container based on the button clicked
+            const container = button.parentElement.querySelector('.overflow-x-auto');
+            if (container) {
+                container.scrollBy({ left: 200, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+
+</html>

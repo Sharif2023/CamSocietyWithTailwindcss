@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Photographer Management</title>
+</head>
+
+<body class="bg-gray-100">
+
+    <body class="bg-gray-100">
+        <div class="flex h-screen">
+            <aside class="fixed bg-gray-800 text-gray-100 w-64 flex flex-col h-full">
+                <div class="flex items-center justify-center h-16 bg-gray-900">
+                    <h1 class="text-xl font-bold">CAMSOCIETY</h1>
+                </div>
+                <nav class="flex-1 px-4 py-2 space-y-1">
+                    <a href="AdminDashboard.html" class="block py-2 px-3 rounded hover:bg-gray-700">Dashboard</a>
+                    <a href="adminAnalytics.html" class="block py-2 px-3 rounded hover:bg-gray-700">Analytics</a>
+
+                    <h2 class="mt-4 text-sm font-bold text-gray-400">Management</h2>
+                    <a href="UserControl.html" class="block py-2 px-3 rounded hover:bg-gray-700">Users</a>
+                    <a href="PhotographerControl.html"
+                        class="block py-2 px-3 rounded hover:bg-gray-700">Photographers</a>
+                    <a href="MarketPlaceManagement.html" class="block py-2 px-3 rounded hover:bg-gray-700">Camera & Accessories</a>
+                    <a href="RentItemManagement.html" class="block py-2 px-3 rounded hover:bg-gray-700">Rent Items</a>
+                    <a href="PhotoSaleManagement.html" class="block py-2 px-3 rounded hover:bg-gray-700">Photo Sales</a>
+                    <a href="EventManagement.html" class="block py-2 px-3 rounded hover:bg-gray-700">Event-Management</a>
+                    <a href="BlogsTipsManagement.html" class="block py-2 px-3 rounded hover:bg-gray-700">Blogs & Tips</a>
+
+                    <h2 class="mt-4 text-sm font-bold text-gray-400">Notifications</h2>
+                    <a href="TransactionManagement.html" class="block py-2 px-3 rounded hover:bg-gray-700">Transaction</a>
+                    <a href="ReportActions.html" class="block py-2 px-3 rounded hover:bg-gray-700">Report & Actions</a>
+                </nav>
+                <div class="flex items-center justify-center">
+                    <button type="button" onclick="window.location.href = '../landingPage.html'"
+                        class="p-2 bg-green-500 text-white rounded mb-6">Log Out</button>
+                </div>
+            </aside>
+
+            <main class="bg-gray100 flex-1 p-6 ml-64">
+                <div class="flex items-center justify-between">
+                    <input type="text" placeholder="Search"
+                        class="w-2/3 p-2 border rounded flex items-center justify-center">
+                    <div class="flex items-center space-x-4">
+                    <button class="p-2 bg-gray-200 rounded-full" onclick="viewNotification()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11a7.003 7.003 0 0 0-5-6.708V4a1 1 0 10-2 0v.292A7.003 7.003 0 0 0 6 11v3.159c0 .415-.162.815-.446 1.117L4 17h5" />
+                        </svg>
+                    </button>
+                    <div id="Noti_popup" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 overflow-y-auto">
+                        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center">
+                            <div class="relative bg-gray-800 rounded-lg shadow-lg p-5 w-96 h-px-400">
+                                <!-- Cross Button -->
+                                <button type="button"
+                                    class="absolute top-3 right-3 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                    data-modal-toggle="Noti_popup" onclick="viewNotification()">
+                                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <h3 class="text-lg font-medium text-white">Notifications</h3>
+                                <div class="bg-white p-4 shadow rounded">
+                                    <h2 class="text-gray-400">Here will show the Notifications </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Page Header -->
+                <div class="text-center mb-6 mt-5">
+                    <h1 class="text-2xl font-bold">Photographer Management</h1>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <label for="sort" class="mr-2 text-gray-600">Sort by:</label>
+                        <input type="text" id="sort" placeholder="Sort" class="p-2 border rounded">
+                    </div>
+                    <div>
+                        <label for="filter" class="mr-2 text-gray-600">Filter by:</label>
+                        <input type="text" id="filter" placeholder="Filter" class="p-2 border rounded">
+                    </div>
+                </div>
+
+                <!-- Photographer Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-4 shadow rounded">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                150 x 150</div>
+                            <h2 class="mt-4 font-bold">John Doe</h2>
+                            <p class="text-gray-600">Wedding Photographer</p>
+                            <p class="text-gray-500">New York, USA</p>
+                            <p class="text-yellow-500 mt-2">4.8/5 <span class="text-gray-500">(25 reviews)</span></p>
+                            <p class="text-center text-gray-700 mt-2">"Capturing moments beautifully."</p>
+                            <div>
+                                <button class="mt-4 bg-black text-white px-4 py-2 rounded" onclick="viewProfile()">View
+                                    Profile</button>
+                                <div id="popup" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 overflow-y-auto">
+                                    <div
+                                        class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center">
+                                        <div class="relative bg-gray-600 rounded-lg shadow-lg p-5 w-2/3 h-px-500">
+                                            <!-- Cross Button -->
+                                            <button type="button"
+                                                class="absolute top-3 right-3 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                                data-modal-toggle="popup" onclick="viewProfile()">
+                                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
+                                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </button>
+                                            <div class="max-w-6xl mx-auto bg-white shadow-lg rounded p-6">
+                                                <!-- Profile Section -->
+                                                <div class="flex items-start gap-6 mb-6">
+                                                    <!-- Profile Picture -->
+                                                    <div
+                                                        class="w-32 h-32 bg-gray-200 rounded flex items-center justify-center text-gray-500">
+                                                        150 x 150</div>
+
+                                                    <!-- Profile Info -->
+                                                    <div>
+                                                        <h1 class="text-xl font-bold">John Doe</h1>
+                                                        <p class="text-gray-600">Wedding Photographer</p>
+                                                        <p class="text-gray-500">New York, USA</p>
+                                                        <p class="text-yellow-500 mt-2">4.8/5 <span
+                                                                class="text-gray-500">(25 reviews)</span></p>
+                                                        <button class="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+                                                            onclick="handleBanAccount()">Ban Account</button>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Content Section -->
+                                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                                    <!-- Recent Reviews -->
+                                                    <div class="md:col-span-1">
+                                                        <h2 class="text-lg font-bold mb-4">Recent Reviews</h2>
+                                                        <ul class="space-y-4">
+                                                            <li class="text-gray-600">"John was amazing! He captured
+                                                                every moment perfectly."<br><span
+                                                                    class="text-sm text-gray-500">- Sarah L.</span></li>
+                                                            <li class="text-gray-600">"Highly recommend! Professional
+                                                                and talented."<br><span class="text-sm text-gray-500">-
+                                                                    Mark T.</span></li>
+                                                            <li class="text-gray-600">"Fantastic experience, very happy
+                                                                with the results!"<br><span
+                                                                    class="text-sm text-gray-500">- Emily R.</span></li>
+                                                        </ul>
+                                                        <a href="#" class="text-yellow-600 mt-4 inline-block">View All
+                                                            Reviews</a>
+                                                    </div>
+
+                                                    <!-- Showcase Section -->
+                                                    <div class="md:col-span-2">
+                                                        <h2 class="text-lg font-bold mb-4">Previous Showcase</h2>
+                                                        <div
+                                                            class="grid grid-cols-2 sm:grid-cols-3 gap-4 bg-gray-100 p-4 rounded">
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+                                    onclick="handleBanAccount()">Ban Account</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white p-4 shadow rounded">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                150 x 150</div>
+                            <h2 class="mt-4 font-bold">John Doe</h2>
+                            <p class="text-gray-600">Wedding Photographer</p>
+                            <p class="text-gray-500">New York, USA</p>
+                            <p class="text-yellow-500 mt-2">4.8/5 <span class="text-gray-500">(25 reviews)</span></p>
+                            <p class="text-center text-gray-700 mt-2">"Capturing moments beautifully."</p>
+                            <div>
+                                <button class="mt-4 bg-black text-white px-4 py-2 rounded" onclick="viewProfile()">View
+                                    Profile</button>
+                                <div id="popup" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 overflow-y-auto">
+                                    <div
+                                        class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center">
+                                        <div class="relative bg-gray-600 rounded-lg shadow-lg p-5 w-2/3 h-px-500">
+                                            <!-- Cross Button -->
+                                            <button type="button"
+                                                class="absolute top-3 right-3 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                                data-modal-toggle="popup" onclick="viewProfile()">
+                                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
+                                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </button>
+                                            <div class="max-w-6xl mx-auto bg-white shadow-lg rounded p-6">
+                                                <!-- Profile Section -->
+                                                <div class="flex items-start gap-6 mb-6">
+                                                    <!-- Profile Picture -->
+                                                    <div
+                                                        class="w-32 h-32 bg-gray-200 rounded flex items-center justify-center text-gray-500">
+                                                        150 x 150</div>
+
+                                                    <!-- Profile Info -->
+                                                    <div>
+                                                        <h1 class="text-xl font-bold">John Doe</h1>
+                                                        <p class="text-gray-600">Wedding Photographer</p>
+                                                        <p class="text-gray-500">New York, USA</p>
+                                                        <p class="text-yellow-500 mt-2">4.8/5 <span
+                                                                class="text-gray-500">(25 reviews)</span></p>
+                                                        <button class="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+                                                            onclick="handleBanAccount()">Ban Account</button>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Content Section -->
+                                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                                    <!-- Recent Reviews -->
+                                                    <div class="md:col-span-1">
+                                                        <h2 class="text-lg font-bold mb-4">Recent Reviews</h2>
+                                                        <ul class="space-y-4">
+                                                            <li class="text-gray-600">"John was amazing! He captured
+                                                                every moment perfectly."<br><span
+                                                                    class="text-sm text-gray-500">- Sarah L.</span></li>
+                                                            <li class="text-gray-600">"Highly recommend! Professional
+                                                                and talented."<br><span class="text-sm text-gray-500">-
+                                                                    Mark T.</span></li>
+                                                            <li class="text-gray-600">"Fantastic experience, very happy
+                                                                with the results!"<br><span
+                                                                    class="text-sm text-gray-500">- Emily R.</span></li>
+                                                        </ul>
+                                                        <a href="#" class="text-yellow-600 mt-4 inline-block">View All
+                                                            Reviews</a>
+                                                    </div>
+
+                                                    <!-- Showcase Section -->
+                                                    <div class="md:col-span-2">
+                                                        <h2 class="text-lg font-bold mb-4">Previous Showcase</h2>
+                                                        <div
+                                                            class="grid grid-cols-2 sm:grid-cols-3 gap-4 bg-gray-100 p-4 rounded">
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+                                    onclick="handleBanAccount()">Ban Account</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate Cards -->
+                    <!-- Repeat as needed for more photographers -->
+                    <div class="bg-white p-4 shadow rounded">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                150 x 150</div>
+                            <h2 class="mt-4 font-bold">John Doe</h2>
+                            <p class="text-gray-600">Wedding Photographer</p>
+                            <p class="text-gray-500">New York, USA</p>
+                            <p class="text-yellow-500 mt-2">4.8/5 <span class="text-gray-500">(25 reviews)</span></p>
+                            <p class="text-center text-gray-700 mt-2">"Capturing moments beautifully."</p>
+                            <div>
+                                <button class="mt-4 bg-black text-white px-4 py-2 rounded" onclick="viewProfile()">View
+                                    Profile</button>
+                                <div id="popup" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 overflow-y-auto">
+                                    <div
+                                        class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center">
+                                        <div class="relative bg-gray-600 rounded-lg shadow-lg p-5 w-2/3 h-px-500">
+                                            <!-- Cross Button -->
+                                            <button type="button"
+                                                class="absolute top-3 right-3 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                                data-modal-toggle="popup" onclick="viewProfile()">
+                                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
+                                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </button>
+                                            <div class="max-w-6xl mx-auto bg-white shadow-lg rounded p-6">
+                                                <!-- Profile Section -->
+                                                <div class="flex items-start gap-6 mb-6">
+                                                    <!-- Profile Picture -->
+                                                    <div
+                                                        class="w-32 h-32 bg-gray-200 rounded flex items-center justify-center text-gray-500">
+                                                        150 x 150</div>
+
+                                                    <!-- Profile Info -->
+                                                    <div>
+                                                        <h1 class="text-xl font-bold">John Doe</h1>
+                                                        <p class="text-gray-600">Wedding Photographer</p>
+                                                        <p class="text-gray-500">New York, USA</p>
+                                                        <p class="text-yellow-500 mt-2">4.8/5 <span
+                                                                class="text-gray-500">(25 reviews)</span></p>
+                                                        <button class="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+                                                            onclick="handleBanAccount()">Ban Account</button>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Content Section -->
+                                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                                    <!-- Recent Reviews -->
+                                                    <div class="md:col-span-1">
+                                                        <h2 class="text-lg font-bold mb-4">Recent Reviews</h2>
+                                                        <ul class="space-y-4">
+                                                            <li class="text-gray-600">"John was amazing! He captured
+                                                                every moment perfectly."<br><span
+                                                                    class="text-sm text-gray-500">- Sarah L.</span></li>
+                                                            <li class="text-gray-600">"Highly recommend! Professional
+                                                                and talented."<br><span class="text-sm text-gray-500">-
+                                                                    Mark T.</span></li>
+                                                            <li class="text-gray-600">"Fantastic experience, very happy
+                                                                with the results!"<br><span
+                                                                    class="text-sm text-gray-500">- Emily R.</span></li>
+                                                        </ul>
+                                                        <a href="#" class="text-yellow-600 mt-4 inline-block">View All
+                                                            Reviews</a>
+                                                    </div>
+
+                                                    <!-- Showcase Section -->
+                                                    <div class="md:col-span-2">
+                                                        <h2 class="text-lg font-bold mb-4">Previous Showcase</h2>
+                                                        <div
+                                                            class="grid grid-cols-2 sm:grid-cols-3 gap-4 bg-gray-100 p-4 rounded">
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+                                    onclick="handleBanAccount()">Ban Account</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 shadow rounded">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                                150 x 150</div>
+                            <h2 class="mt-4 font-bold">John Doe</h2>
+                            <p class="text-gray-600">Wedding Photographer</p>
+                            <p class="text-gray-500">New York, USA</p>
+                            <p class="text-yellow-500 mt-2">4.8/5 <span class="text-gray-500">(25 reviews)</span></p>
+                            <p class="text-center text-gray-700 mt-2">"Capturing moments beautifully."</p>
+                            <div>
+                                <button class="mt-4 bg-black text-white px-4 py-2 rounded" onclick="viewProfile()">View
+                                    Profile</button>
+                                <div id="popup" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 overflow-y-auto">
+                                    <div
+                                        class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center">
+                                        <div class="relative bg-gray-600 rounded-lg shadow-lg p-5 w-2/3 h-px-500">
+                                            <!-- Cross Button -->
+                                            <button type="button"
+                                                class="absolute top-3 right-3 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                                data-modal-toggle="popup" onclick="viewProfile()">
+                                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
+                                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </button>
+                                            <div class="max-w-6xl mx-auto bg-white shadow-lg rounded p-6">
+                                                <!-- Profile Section -->
+                                                <div class="flex items-start gap-6 mb-6">
+                                                    <!-- Profile Picture -->
+                                                    <div
+                                                        class="w-32 h-32 bg-gray-200 rounded flex items-center justify-center text-gray-500">
+                                                        150 x 150</div>
+
+                                                    <!-- Profile Info -->
+                                                    <div>
+                                                        <h1 class="text-xl font-bold">John Doe</h1>
+                                                        <p class="text-gray-600">Wedding Photographer</p>
+                                                        <p class="text-gray-500">New York, USA</p>
+                                                        <p class="text-yellow-500 mt-2">4.8/5 <span
+                                                                class="text-gray-500">(25 reviews)</span></p>
+                                                        <button class="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+                                                            onclick="handleBanAccount()">Ban Account</button>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Content Section -->
+                                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                                    <!-- Recent Reviews -->
+                                                    <div class="md:col-span-1">
+                                                        <h2 class="text-lg font-bold mb-4">Recent Reviews</h2>
+                                                        <ul class="space-y-4">
+                                                            <li class="text-gray-600">"John was amazing! He captured
+                                                                every moment perfectly."<br><span
+                                                                    class="text-sm text-gray-500">- Sarah L.</span></li>
+                                                            <li class="text-gray-600">"Highly recommend! Professional
+                                                                and talented."<br><span class="text-sm text-gray-500">-
+                                                                    Mark T.</span></li>
+                                                            <li class="text-gray-600">"Fantastic experience, very happy
+                                                                with the results!"<br><span
+                                                                    class="text-sm text-gray-500">- Emily R.</span></li>
+                                                        </ul>
+                                                        <a href="#" class="text-yellow-600 mt-4 inline-block">View All
+                                                            Reviews</a>
+                                                    </div>
+
+                                                    <!-- Showcase Section -->
+                                                    <div class="md:col-span-2">
+                                                        <h2 class="text-lg font-bold mb-4">Previous Showcase</h2>
+                                                        <div
+                                                            class="grid grid-cols-2 sm:grid-cols-3 gap-4 bg-gray-100 p-4 rounded">
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                            <div
+                                                                class="w-full h-24 bg-gray-300 flex items-center justify-center text-gray-500">
+                                                                300 x 200</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+                                    onclick="handleBanAccount()">Ban Account</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            function viewProfile() {
+                const popup = document.getElementById('popup');
+                popup.classList.toggle('hidden');
+            }
+            function handleBanAccount() {
+                // Confirmation before banning
+                const confirmation = confirm("Are you sure you want to ban this account? This action cannot be undone.");
+
+                if (confirmation) {
+                    // Simulate sending a ban request to the server (replace with actual API call)
+                    alert("Account has been deleted");
+                    //Add necessary code to delete photography account only
+                }
+            }
+            function viewNotification() {
+                const popup = document.getElementById('Noti_popup');
+                popup.classList.toggle('hidden');
+            }
+        </script>
+    </body>
+
+</html>
